@@ -1,5 +1,6 @@
 
 Server : 네이버클라우드 우분투 
+### 1. 젠킨스 설치  
 
 #### Step1. openJdk11 설치
 ```bash
@@ -44,12 +45,23 @@ sudo systemctl status jenkins
 
 #### Step4. 네이버 클라우드 ACG 설정 
 ![ACG설정](./image/naver_acg.png)
+젠킨스 포트는 디폴트로 8080으로 잡혀있다. 8080포트를 ACG에서 열어준다. 
+만약 다른 포트로 설정하였다면 ACG설정에서 해당 포트를 설정해줘야한다. 
 
 #### Step5. 젠킨스 접속 및 플러그인 설치 
+최초로 젠킨스 서버로 접속하면 어드민 계정을 초기화하라는 페이지가 나온다.
+![unlock-jenkins](./image/unLock-jenkins.png)
+
 ```bash
 cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
-출력되는 패스워드를 입력한 후 플러그인을 설치한다.
+위의 안내문구처럼 명령어를 실행하여 출력되는 패스워드를 입력한 후 플러그인을 설치한 후 로그인 
+
+### 2. Job 등록
+젠킨스에서 Job이란 작업을 의미하며 작업의 최소단위를 일컫는다.   
+
+2.1) Job 등록 
+
 
 
 
