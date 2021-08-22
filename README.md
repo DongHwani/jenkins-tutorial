@@ -57,11 +57,19 @@ cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 위의 안내문구처럼 명령어를 실행하여 출력되는 패스워드를 입력한 후 플러그인을 설치한 후 로그인 
 
-### 2. Job 등록
-젠킨스에서 Job이란 작업을 의미하며 작업의 최소단위를 일컫는다.   
+### 2. Job 등록 및 Github 연동 
+젠킨스에서 Job이란 작업을 의미하며 작업의 최소단위를 일컫는다.    
 
 2.1) Job 등록 
-
+ - 좌측 메뉴의 '새로운 Item' 클릭
+![step1](./image/Job_step1.png)
+ - Freestyle project 클릭 후 아이템명 입력후 생성
+![step2](./image/Job_step2.png)
+ - Github SSH 연동  
+클라우드 서버에 우선 Git을 설치한다. 
+```bash
+yum install git 
+```
 
 
 
